@@ -26,7 +26,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
       txt += `ᡣ𐭩  👸🏼  *Nombre* : ${name}\n`
       txt += `ᡣ𐭩  🌸  *Edad* : ${age} años\n`
       txt += `ᡣ𐭩  ✨  *Serie*\n`
-      txt += `ᡣ𐭩  💎  ${sn}`
+      txt += `└  💎  ${sn}`
 await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
 await m.react('👸🏻')
 }
