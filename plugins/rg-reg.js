@@ -28,7 +28,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
       txt += `ᡣ𐭩  ✨  *Serie*\n`
       txt += `ᡣ𐭩  💎  ${sn}`
 await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
-await m.react('👸🏻)
+await m.react('👸🏻')
 }
 handler.help = ['reg'].map(v => v + ' *<nombre.edad>*')
 handler.tags = ['rg']
