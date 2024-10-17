@@ -45,4 +45,24 @@ let img = catalogo
 				}
 			}
 		}
+
+global.fake = {
+contextInfo: {
+isForwarded: true,
+forwardedNewsletterMessageInfo: {
+newsletterJid: "12098765423@newsletter",
+serverMessageId: 100,
+newsletterName: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻',
+},
+externalAdReply: { 
+showAdAttribution: true,
+title: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻',
+body: 'Descripción Ejemplo',
+previewType: "PHOTO",
+thumbnailUrl: 'https://i.ibb.co/9hmL6YW/file.jpg',
+sourceUrl: 'https://www.instagram.com/sisked_1',
+mediaType: 1,
+renderLargerThumbnail: false
+},},}
+	
 }
