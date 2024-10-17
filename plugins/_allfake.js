@@ -57,7 +57,7 @@ newsletterName: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻',
 externalAdReply: { 
 showAdAttribution: true,
 title: '𝑺𝑰𝑺𝑲𝑬𝑫-𝑩𝑶𝑻',
-body: 'Descripción Ejemplo',
+body: '𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩',
 previewType: "PHOTO",
 thumbnailUrl: 'https://i.ibb.co/YcMvWsj/file.jpg',
 sourceUrl: 'https://www.instagram.com/sisked_1',
