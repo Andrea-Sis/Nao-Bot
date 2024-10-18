@@ -11,9 +11,9 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         "mp4doc"
     ]
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split(" ")
-   // if (!lister.includes(feature)) return conn.reply(m.chat, `*🚩 Ingresa el formato en que deseas descargar más el titulo de un video o musica de YouTube.*\n\nEjemplo : ${usedPrefix + command} *mp3* SUICIDAL-IDOL - ecstacy\n\nFormatos disponibles :\n${usedPrefix + command} *mp3*\n${usedPrefix + command} *mp3doc*\n${usedPrefix + command} *mp4*\n${usedPrefix + command} *mp4doc*`,  m, fake,)
+   // if (!lister.includes(feature)) return conn.reply(m.chat, `*🚩 Ingresa el formato en que deseas descargar más el titulo de un video o musica de YouTube.*\n\nEjemplo : ${usedPrefix + command} *mp3* SUICIDAL-IDOL - ecstacy\n\nFormatos disponibles :\n${usedPrefix + command} *mp3*\n${usedPrefix + command} *mp3doc*\n${usedPrefix + command} *mp4*\n${usedPrefix + command} *mp4doc*`,  m, m,)
 	  if (command == "play" || command == 'play2') {
-            if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`,  m, rcanal,)
+            if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`,  m, m,)
     await m.react('🕓')
     var res = await yts(text)
     var vid = res.videos[0]
@@ -33,7 +33,7 @@ await conn.sendButton2(m.chat, texto1, botname, res.videos[0].thumbnail, [
 	  }
   
             if (command == "mp3") {
-	 if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`, m, fake,)
+	 if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`, m, )
 		
        try {
     const res = await yts(text)
@@ -76,13 +76,13 @@ sourceUrl: `${vid.url}`,
 thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
        await m.react('✅')
        } catch (error) {
-        await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*\n\n` + error, m, fake,).then(_ => m.react('✖️'))
+        await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*\n\n` + error, m, m,).then(_ => m.react('✖️'))
         console.error(error)
     }}
     }
         
         if (command == "mp4") {
-            if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`, m, fake,)
+            if (!text) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`, m, m,)
     await m.react('🕓')
     let res = await yts(text)
     let vid = res.videos[0]
@@ -125,7 +125,7 @@ if (size.split('MB')[0] >= limit) return conn.reply(m.chat,`El archivo pesa mas 
     }}}
     
     if (command == "mp3doc") {
-            if (!inputs) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`,  m, fake,)
+            if (!inputs) return conn.reply(m.chat, `*🚩 Ingresa el titulo de un video o musica de YouTube.*`,  m, m,)
     await m.react('🕓')
     let res = await yts(text)
     let vid = res.videos[0]
@@ -181,7 +181,7 @@ sourceUrl: `${vid.url}`,
 thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
        await m.react('✅')
        } catch (error) {
-        await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*`,  m, fake,).then(_ => m.react('✖️'))
+        await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*`,  m, m,).then(_ => m.react('✖️'))
         console.error(error)
     }}}
     
