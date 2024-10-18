@@ -1,10 +1,5 @@
 `PLUGUN PLAY YOUTUBE`
 
-/* 
-- BY KENISAWADEV 
-- https://whatsapp.com/channel/0029VarbyoN2ZjCkcPW7q33F
-*/
-
 import fetch from "node-fetch"
 import yts from 'yt-search'
 
@@ -18,7 +13,7 @@ const handler = async (m, { text, usedPrefix, command, conn }) => {
     let videoList = res.all;
     let video = videoList[0];
 
-    let texto = `_*Reproduciendo  ${video.title}...*_`;
+    let texto = `_*Busquedad...  ${video.title}...*_`;
 
     await conn.sendMessage(m?.chat, {react: {text: `🎵`, key: m?.key}});
 
