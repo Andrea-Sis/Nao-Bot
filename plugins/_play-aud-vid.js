@@ -9,7 +9,7 @@ let limit2 = 400;
 let limit_a1 = 50;
 let limit_a2 = 400;
 
-const handler = async (message, { conn, command, args, text, usedPrefix }) => {
+const handler = async (m, { conn, command, args, text, usedPrefix }) => {
     if (!text) throw `› *Hace falta el título del video de YouTube.*\n\n› *Ejemplo:* ${usedPrefix}${command} Midnight City - M83`;
 
     const searchResults = await search(args.join(' '));
@@ -26,13 +26,13 @@ const handler = async (message, { conn, command, args, text, usedPrefix }) => {
 › *Publicado:* ${searchResults[0].ago}
 › *Enlace:* ${searchResults[0].url}
 › *Tipo:* ${fileType}
-› *Este comando está siendo procesado por La Darly Bot*
+› *Este comando está siendo procesado por Darly Bot*
     `.trim();
 
-    await conn.sendMessage(message.chat, {
+    await conn.sendMessage(m.chat, {
         image: { url: searchResults[0].thumbnail },
         caption: resultMessage
-    }, { quoted: message });
+    }, { quoted: m });
 
     if (command === 'play.aud') {
         try {
@@ -42,22 +42,22 @@ const handler = async (message, { conn, command, args, text, usedPrefix }) => {
             const audioSizeMB = audioBuffer.byteLength / (1024 * 1024);
 
             if (audioSizeMB >= limit_a2) {
-                await conn.sendMessage(message.chat, { text: `› *Su archivo es demasiado grande, envíelo manualmente:* ${audioUrl}` }, { quoted: message });
+                await conn.sendMessage(m.chat, { text: `› *Su archivo es demasiado grande, envíelo manualmente:* ${audioUrl}` }, { quoted: m });
                 return;
             }
             if (audioSizeMB >= limit_a1 && audioSizeMB <= limit_a2) {
-                await conn.sendMessage(message.chat, {
+                await conn.sendMessage(m.chat, {
                     document: audioBuffer,
                     mimetype: 'audio/mpeg',
                     fileName: `${audioTitle}.mp3`
-                }, { quoted: message });
+                }, { quoted: m });
                 return;
             } else {
-                await conn.sendMessage(message.chat, {
+                await conn.sendMessage(m.chat, {
                     audio: audioBuffer,
                     mimetype: 'audio/mpeg',
                     fileName: `${audioTitle}.mp3`
-                }, { quoted: message });
+                }, { quoted: m });
                 return;
             }
         } catch {
@@ -73,22 +73,22 @@ const handler = async (message, { conn, command, args, text, usedPrefix }) => {
             const videoSizeMB = videoBuffer.byteLength / (1024 * 1024);
 
             if (videoSizeMB >= limit2) {
-                await conn.sendMessage(message.chat, { text: `› *Su archivo es demasiado grande, envíelo manualmente:* ${videoUrl}` }, { quoted: message });
+                await conn.sendMessage(m.chat, { text: `› *Su archivo es demasiado grande, envíelo manualmente:* ${videoUrl}` }, { quoted: m });
                 return;
             }
             if (videoSizeMB >= limit1 && videoSizeMB <= limit2) {
-                await conn.sendMessage(message.chat, {
+                await conn.sendMessage(m.chat, {
                     document: videoBuffer,
                     mimetype: 'video/mp4',
                     fileName: `${videoTitle}.mp4`
-                }, { quoted: message });
+                }, { quoted: m });
                 return;
             } else {
-                await conn.sendMessage(message.chat, {
+                await conn.sendMessage(m.chat, {
                     video: videoBuffer,
                     mimetype: 'video/mp4',
                     fileName: `${videoTitle}.mp4`
-                }, { quoted: message });
+                }, { quoted: m });
                 return;
             }
         } catch {
@@ -118,4 +118,4 @@ function secondString(seconds) {
     const secs = Math.floor(seconds % 60);
 
     return `${days > 0 ? days + 'd ' : ''}${hours > 0 ? hours + 'h ' : ''}${minutes > 0 ? minutes + 'm ' : ''}${secs + 's'}`;
-}
+    }
