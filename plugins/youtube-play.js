@@ -247,9 +247,9 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
         console.error(error)
 }}}
 }
-handler.help = ["play"].map(v => v + " <formato> <búsqueda>")
+handler.help = ["En proseso..."].map(v => v + " <formato> <búsqueda>")
 handler.tags = ["downloader"]
-handler.command = ['play', 'play2', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
+handler.command = ['play3', 'play2', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
 handler.register = true 
 handler.star = 2
 export default handler
