@@ -3,14 +3,14 @@ import axios from 'axios';
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-    if (!text) throw `_*[ ⚠️ ] Agrega lo que quieres buscar en Spotify*_\n\n_Ejemplo:_\n.play Marshmello Moving On`;
+    if (!text) throw `_*[ ⚠️ ] Agrega lo que quieres buscar*_\n\n_Ejemplo:_\n.play Marshmello Moving On`;
 
     try { 
         
         let { data } = await axios.get(`https://deliriussapi-oficial.vercel.app/search/spotify?q=${encodeURIComponent(text)}&limit=10`);
 
         if (!data.data || data.data.length === 0) {
-            throw `_*[ ⚠️ ] No se encontraron resultados para "${text}" en Spotify.*_`;
+            throw `_*[ ⚠️ ] No se encontraron resultados para "${text}" en Youtube.*_`;
         }
 
         const img = data.data[0].image;
@@ -46,7 +46,7 @@ _*🎶 Enviando música...*_`.trim();
         if (result.data.url) {
             const downloadUrl = result.data.url;
             const filename = `${result.data.title || 'audio'}.mp3`;
-            await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, fileName: filename, mimetype: 'audio/mpeg', caption: `╭━❰  *SPOTIFY*  ❱━⬣\n${filename}\n╰━❰ *${wm}* ❱━⬣`, quoted: m });
+            await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, fileName: filename, mimetype: 'audio/mpeg', caption: `╭━❰  *YouTube*  ❱━⬣\n${filename}\n╰━❰ *${botname}* ❱━⬣`, quoted: m });
         } else {
             throw new Error('_*[ ❌ ] Ocurrió un error al descargar el archivo mp3_');
         }
