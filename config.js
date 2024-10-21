@@ -12,7 +12,7 @@ import moment from 'moment-timezone'
 global.owner = [
   ['584123989549', 'Anuar⁩', true],
   ['584123989549'],
-  ['584123989549'],
+  ['525554705747'],
   ['584123989549'],
   ['584123989549']
 ]
@@ -30,7 +30,7 @@ global.wait = '⟢◦ 𝐍𝐅 𝐁𝐎𝐓'
 global.botname = '⟢◦ 𝐍𝐅 𝐁𝐎𝐓'
 global.textbot = `Powered By Nao`
 global.listo = 'Completado ✯'
-global.namechannel = '𝑺𝑰𝑺𝑲𝑬𝑫 𝑩𝑶𝑻'
+global.namechannel = '⟢ 𝐍𝐅 𝐁𝐎𝐓'
 global.baileys = '@whiskeysockets/baileys'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -40,7 +40,7 @@ global.miniurl = fs.readFileSync('./storage/img/siskedurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = 'https://chat.whatsapp.com/CTaspTXla9T1zA83m6ZKPe'
+global.group = 'https://chat.whatsapp.com/DCivc8qWd3w0s6ZfApZWuP'
 global.canal = 'https://whatsapp.com/channel/0029VajsWhdGZNCtrIv2nf3G'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
