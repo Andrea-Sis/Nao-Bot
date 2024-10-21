@@ -13,7 +13,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
       let welcome = chat.sWelcome.replace('@user', () => user);
       await conn.sendAi(m.chat, botname, textbot, welcome, img, img, canal)
     } else {
-      let bienvenida = `┌─★ 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 Bienvenida 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Bienvenido a\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
+      let bienvenida = `┌─★ ⟢◦ 𝐍𝐅 𝐁𝐎𝐓 \n│「 Bienvenida 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Bienvenido a\n   │✑  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
       await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal)
     }
   }
@@ -24,7 +24,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
       let bye = chat.sBye.replace('@user', () => user);
       await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal)
     } else {
-      let bye = `┌─★ 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIÓS 👋 FEA 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+      let bye = `┌─★ ⟢◦ 𝐍𝐅 𝐁𝐎𝐓 \n│「 ADIÓS 👋🏼 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
       await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal)
     }
   }
@@ -35,7 +35,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
       let bye = chat.sBye.replace('@user', () => user);
       await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal)
     } else {
-      let kick = `┌─★ 𝐃𝐀𝐑𝐋𝐘 𝐁𝐎𝐓 ᡣ𐭩 \n│「 ADIÓS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+      let kick = `┌─★ ⟢◦ 𝐍𝐅 𝐁𝐎𝐓 \n│「 ADIÓS 👋🏼 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  Se fue\n   │✑ Jamás te quisimos aquí\n   └───────────────┈ ⳹`
       await conn.sendAi(m.chat, botname, textbot, kick, img, img, canal)
     }
 }}
